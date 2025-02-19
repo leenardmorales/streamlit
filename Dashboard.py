@@ -1,7 +1,7 @@
 import datetime
 import streamlit as st
 import pandas as pd
-import plotly.express
+import plotly.express as pex
 import datetime
 import time
 
@@ -90,7 +90,7 @@ if "COUNTRY" in df.columns and "CATEGORY" in df.columns:
     country_sales_count.columns = ["Country", "Total Sales Count"]
 
     # Create a line chart
-    fig = plotly.express.line(country_sales_count, x="Country", y="Total Sales Count",
+    fig = pex.line(country_sales_count, x="Country", y="Total Sales Count",
                   title=f"Total Sales Count per Country ({selected_category})", markers=True)
 
     # Display the graph
