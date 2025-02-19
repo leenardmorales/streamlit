@@ -1,7 +1,6 @@
 import datetime
 import streamlit as st
 import pandas as pd
-import plotly.express as pex
 import datetime
 import time
 
@@ -71,7 +70,7 @@ st.divider()
 # Read the existing CSV file
 df = pd.read_csv("CAPSTONEDATA.csv")
 
-# Ensure required columns exist
+"""# Ensure required columns exist
 if "COUNTRY" in df.columns and "CATEGORY" in df.columns:
     # Get unique categories and add "All Categories" option
     categories = ["All Categories"] + list(df["CATEGORY"].unique())
@@ -96,7 +95,7 @@ if "COUNTRY" in df.columns and "CATEGORY" in df.columns:
     # Display the graph
     st.plotly_chart(fig)
 else:
-    st.error("The CSV file must contain 'COUNTRY' and 'CATEGORY' columns.")
+    st.error("The CSV file must contain 'COUNTRY' and 'CATEGORY' columns.")"""
 
 # Ensure the required columns exist
 required_columns = ["TOTALTAXABLEINCOME", "NETTAXABLEINCOME"]
