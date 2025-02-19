@@ -70,32 +70,6 @@ st.divider()
 # Read the existing CSV file
 df = pd.read_csv("CAPSTONEDATA.csv")
 
-"""# Ensure required columns exist
-if "COUNTRY" in df.columns and "CATEGORY" in df.columns:
-    # Get unique categories and add "All Categories" option
-    categories = ["All Categories"] + list(df["CATEGORY"].unique())
-
-    # Create a select box for category filtering
-    selected_category = st.selectbox("Select a Category:", categories, index=0)
-
-    # Filter data based on the selected category
-    if selected_category == "All Categories":
-        filtered_df = df  # No filtering, show all data
-    else:
-        filtered_df = df[df["CATEGORY"] == selected_category]
-
-    # Count the total sales per country for the selected category
-    country_sales_count = filtered_df["COUNTRY"].value_counts().reset_index()
-    country_sales_count.columns = ["Country", "Total Sales Count"]
-
-    # Create a line chart
-    fig = pex.line(country_sales_count, x="Country", y="Total Sales Count",
-                  title=f"Total Sales Count per Country ({selected_category})", markers=True)
-
-    # Display the graph
-    st.plotly_chart(fig)
-else:
-    st.error("The CSV file must contain 'COUNTRY' and 'CATEGORY' columns.")"""
 
 # Ensure the required columns exist
 required_columns = ["TOTALTAXABLEINCOME", "NETTAXABLEINCOME"]
