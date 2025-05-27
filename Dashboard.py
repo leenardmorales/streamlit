@@ -4,11 +4,7 @@ from sqlalchemy import create_engine
 import plotly.express as px
 
 # DB Connection Info
-DB_USER = "metadata_user"
-DB_PASS = "Password123"
-DB_HOST = "35.0.133.241"
-DB_PORT = "5432"
-DB_NAME = "rbi_streamingdb"
+
 
 
 engine = create_engine(f'postgresql+psycopg2://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}')
